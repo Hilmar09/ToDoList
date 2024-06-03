@@ -2,22 +2,25 @@ package todolist;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
-/**
- * Hello world!
- */
-public final class App {
+public class App {
 
     static ArrayList<String> tasks = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     static final String FILE_PATH = "tasks.json";
-    
+
     public static void main(String[] args) {
-        System.out.println("Hello World! Welcome To task organaizer");
+        loadTasks(); // Cargar las tareas al inicio
+
+        System.out.println("Hello World! Welcome To task organizer");
 
         boolean exit = false;
 
@@ -43,6 +46,7 @@ public final class App {
 
         sc.close();
     }
+
     private static void showMenu() {
         System.out.println("\nMenu");
         System.out.println("Elige la opción que deseas:");
@@ -111,21 +115,19 @@ public final class App {
             }
         }
     }
-    
 
     private static void listTasks() {
         if (!tasks.isEmpty()){
             for (String task : tasks  ){
                 System.out.println("Task: " + task);
-
-        }}else {
+            }
+        } else {
             System.out.println("No hay tares para mostrar");
         }
     }
-    private static void doneTask(){
-        
-        System.out.println("Estas en done!");
 
+    private static void doneTask() {
+        System.out.println("Estas en done!");
     }
 
     private static void saveTasks() {
@@ -138,7 +140,16 @@ public final class App {
         }
     }
 
-    
+    private static void loadTasks() {
+        try {
+            String json = new String(Files.readAllBytes(Paths.get(FILE_PATH)));
+            Gson gson = new Gson();
+            Type type = new TypeToken<ArrayList<String>>(){}.getType();
+            tasks = gson.fromJson(json, type);
+        } catch (IOException e) {
+            // Si hay un error al leer el archivo, se deja la lista de tareas vacía
+            System.out.println("No se pudo cargar el archivo de tareas. Creando uno nuevo.");
+            tasks = new ArrayList<>();
+        }
+    }
 }
-
-
