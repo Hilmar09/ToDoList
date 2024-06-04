@@ -3,11 +3,11 @@ package todolist;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public final class App {
+public class App {
 
     public static void main(String[] args) {
         String FILE_PATH = "tasks.json";
-        Scanner sc = new Scanner(System.in , "UTF-8"); // Se abre al inicio de App
+        Scanner sc = new Scanner(System.in); // Se abre al inicio de App
         ArrayList<String> tasks = new ArrayList<>();
         LoadTasks.loadTasks(FILE_PATH, tasks);
         System.out.println("Hello World! Welcome To task organizer");
@@ -19,10 +19,10 @@ public final class App {
                 String choice = sc.nextLine();
                 
                 switch (choice) {
-                    case "1" -> AddTask.addTask(tasks, sc); // Pasé el Scanner como parámetro
-                    case "2" -> DeleteTask.deleteTask(tasks, sc); // Pasé el Scanner como parámetro
+                    case "1" -> AddTask.addTask(tasks, sc); 
+                    case "2" -> DeleteTasks.deleteTasks(tasks, sc); 
                     //case "3" -> ListTasks.listTasks(tasks);
-                    //case "4" -> MarkCompletedTask.markTaskCompleted(tasks, sc); // Pasé el Scanner como parámetro
+                    //case "4" -> MarkCompletedTask.markTaskCompleted(tasks, sc); 
                     case "5" -> {
                         SaveTasks.saveTasks(FILE_PATH, tasks);
                         System.out.println("Exiting application. Goodbye!");
@@ -31,7 +31,7 @@ public final class App {
                     default -> System.out.println("Invalid choice. Please try again.");
                 }
             }
-        }
+        }sc.close();
         
     }
 

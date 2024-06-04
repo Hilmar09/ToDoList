@@ -3,8 +3,8 @@ package todolist;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DeleteTask {
-    public static void deleteTask(ArrayList<String> tasks, Scanner sc) { // Recibí el Scanner como parámetro
+public class DeleteTasks {
+    public static void deleteTasks(ArrayList<String> tasks, Scanner sc) { 
         System.out.println("========================================================");
         System.out.println("TASKS LIST:");
         System.out.println("");
@@ -17,10 +17,11 @@ public class DeleteTask {
 
         while (true) {
             System.out.println("========================================================");
-            System.out.print("Do you want to delete a task? yes/no: ");
+            System.out.print("Do you want to delete a task? y/n: ");
             String condition = sc.nextLine().trim().toLowerCase();
 
-            if (condition.equals("yes")) {
+
+            if (condition.equals("y")) {
                 System.out.print("Write the number: ");
                 if (sc.hasNextInt()) {
                 int removeTaskIndex = sc.nextInt();
@@ -45,7 +46,7 @@ public class DeleteTask {
                     System.out.println("Invalid task number. Please try again.");
                 }
 
-            } else if (condition.equals("no")) {
+            } else if (condition.equals("n")) {
                 System.out.println("========================================================");
                 System.out.println("TASKS LIST:");
                 System.out.println("");
