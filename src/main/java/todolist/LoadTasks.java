@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class LoadTasks {
-    public static void loadTasks(String filePath, ArrayList<String> tasks) {
+    public static void loadTasks(String filePath, ArrayList<String> tasks, ArrayList<Boolean> completed) {
         Gson gson = new Gson();
         try {
             String json = new String(Files.readAllBytes(Paths.get(filePath)));

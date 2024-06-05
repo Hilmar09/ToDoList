@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddTask {
-    public static void addTask(ArrayList<String> tasks, Scanner sc) { 
+    public static void addTask(ArrayList<String> tasks, ArrayList<Boolean>completedTask, Scanner sc) { 
         boolean exit = false;
 
         while (!exit) {
@@ -27,6 +27,5 @@ public class AddTask {
             }
         }
     }
-
 
 }

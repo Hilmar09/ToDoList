@@ -9,7 +9,8 @@ public class App {
         String FILE_PATH = "tasks.json";
         Scanner sc = new Scanner(System.in); // Se abre al inicio de App
         ArrayList<String> tasks = new ArrayList<>();
-        LoadTasks.loadTasks(FILE_PATH, tasks);
+        ArrayList<Boolean> completedTask = new ArrayList<>();
+        LoadTasks.loadTasks(FILE_PATH, tasks, completedTask);
         System.out.println("Hello World! Welcome To task organizer");
         boolean exit = false;
 
@@ -19,12 +20,12 @@ public class App {
                 String choice = sc.nextLine();
                 
                 switch (choice) {
-                    case "1" -> AddTask.addTask(tasks, sc); 
-                    case "2" -> DeleteTasks.deleteTasks(tasks, sc); 
-                    //case "3" -> ListTasks.listTasks(tasks);
-                    //case "4" -> MarkCompletedTask.markTaskCompleted(tasks, sc); 
+                    case "1" -> AddTask.addTask(tasks, completedTask, sc); 
+                    case "2" -> DeleteTasks.deleteTasks(tasks, completedTask, sc); 
+                    case "3" -> ListTask.listTasks(tasks, completedTask, sc);
+                    case "4" -> MarkCompledTasks.markCompletedTasks(tasks, completedTask, sc);
                     case "5" -> {
-                        SaveTasks.saveTasks(FILE_PATH, tasks);
+                        SaveTasks.saveTasks(FILE_PATH, tasks, completedTask);
                         System.out.println("Exiting application. Goodbye!");
                         exit = true;
                     }

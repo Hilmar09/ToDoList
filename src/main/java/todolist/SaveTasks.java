@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 
 public class SaveTasks {
-    public static void saveTasks(String filePath, ArrayList<String> tasks) {
+    public static void saveTasks(String filePath, ArrayList<String> tasks, ArrayList<Boolean>completedTask) {
         Gson gson = new Gson();
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(tasks, writer);

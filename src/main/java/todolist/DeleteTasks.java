@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DeleteTasks {
-    public static void deleteTasks(ArrayList<String> tasks, Scanner sc) { 
+    public static void deleteTasks(ArrayList<String> tasks, ArrayList<Boolean>completedTask,Scanner sc) { 
         System.out.println("========================================================");
         System.out.println("TASKS LIST:");
         System.out.println("");
