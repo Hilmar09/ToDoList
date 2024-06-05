@@ -3,6 +3,13 @@
 # TEAM4 DevOps F5 
 ![Logo Team-4](./src/main/resources/static/images/T4.png)
 
+## Guides of de Proyect
+The following guides illustrate how to use some features concretely:
+* [Guide for First Steps in the App](https://www.canva.com/design/DAGHSo-H5x8/oCU5eVCEUqjsacqn77Fasw/edit?utm_content=DAGHSo-H5x8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+* [Oficial Guide of Proyect](https://www.canva.com/design/DAGGrq6ZbEg/k48HQygNQQ5oC0xFL-9Jlg/edit?utm_content=DAGGrq6ZbEg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+
 ## Project: Task Organizer in Java
 
 ### Overview
@@ -49,7 +56,6 @@ For further reference, please consider the following sections:
 
 ### Guides
 The following guides illustrate how to use some features concretely:
-* [Guide for First Steps in the App](https://www.canva.com/design/DAGGrq6ZbEg/k48HQygNQQ5oC0xFL-9Jlg/edit?utm_content=DAGGrq6ZbEg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
