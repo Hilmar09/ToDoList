@@ -33,6 +33,7 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+<<<<<<< HEAD
     <dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -42,6 +43,13 @@
       <groupId>com.googlecode.json-simple</groupId>
       <artifactId>json-simple</artifactId>
       <version>1.1.1</version>
+=======
+  
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.10.1</version>
+>>>>>>> 14d6b1e3e8f15348b1845961b83f17920c954521
     </dependency>
   </dependencies>
   <build>
