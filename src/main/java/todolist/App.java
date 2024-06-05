@@ -5,12 +5,15 @@ import java.util.Scanner;
 
 public class App {
 
+    private static boolean task;
+
     public static void main(String[] args) {
         String FILE_PATH = "tasks.json";
         Scanner sc = new Scanner(System.in); // Se abre al inicio de App
         ArrayList<String> tasks = new ArrayList<>();
         ArrayList<Boolean> completedTask = new ArrayList<>();
         LoadTasks.loadTasks(FILE_PATH, tasks, completedTask);
+        System.out.println(task);
         System.out.println("Hello World! Welcome To task organizer");
         boolean exit = false;
 
@@ -20,9 +23,9 @@ public class App {
                 String choice = sc.nextLine();
                 
                 switch (choice) {
-                    case "1" -> AddTask.addTask(tasks, completedTask, sc); 
-                    case "2" -> DeleteTasks.deleteTasks(tasks, completedTask, sc); 
-                    case "3" -> ListTask.listTasks(tasks, completedTask, sc);
+                    case "1" -> AddTasks.addTask(tasks, completedTask, sc); 
+                    case "2" -> DeleteTasks.deleteTask(tasks, completedTask, sc); 
+                    case "3" -> ListTasks.listTasks(tasks, completedTask, sc);
                     case "4" -> MarkCompledTasks.markCompletedTasks(tasks, completedTask, sc);
                     case "5" -> {
                         SaveTasks.saveTasks(FILE_PATH, tasks, completedTask);

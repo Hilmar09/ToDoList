@@ -1,8 +1,9 @@
 todolist\App.class
+todolist\SaveTasks$TaskWrapper.class
+todolist\LoadTasks$TaskWrapper.class
 todolist\LoadTasks.class
-todolist\LoadTasks$1.class
-todolist\AddTask.class
+todolist\AddTasks.class
 todolist\DeleteTasks.class
 todolist\MarkCompledTasks.class
 todolist\SaveTasks.class
-todolist\ListTask.class
+todolist\ListTasks.class

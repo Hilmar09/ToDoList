@@ -3,7 +3,7 @@ package todolist;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddTask {
+public class AddTasks {
     public static void addTask(ArrayList<String> tasks, ArrayList<Boolean>completedTask, Scanner sc) { 
         boolean exit = false;
 
@@ -11,6 +11,7 @@ public class AddTask {
             System.out.print("Enter task name: ");
             String name = sc.nextLine();
             tasks.add(name);
+            completedTask.add(false);
             System.out.println("Task added successfully!");
 
             System.out.print("¿Quiere introducir una nueva tarea? y: para Sí, n: para No:---> ");
