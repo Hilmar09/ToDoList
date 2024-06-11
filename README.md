@@ -5,7 +5,7 @@
 
 ## Guides of de Proyect
 The following guides illustrate how to use some features concretely:
-* [Guide for First Steps in the App](https://www.canva.com/design/DAGHSo-H5x8/oCU5eVCEUqjsacqn77Fasw/edit?utm_content=DAGHSo-H5x8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+* [Guide for First Steps in the App](https://www.canva.com/design/DAGHSo-H5x8/l2saFTa9-Wvt6g_gjGz1Vw/view?utm_content=DAGHSo-H5x8&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 * [Oficial Guide of Proyect](https://www.canva.com/design/DAGGrq6ZbEg/GNq2wBCKOoupZ8DjJ7qA8Q/view?utm_content=DAGGrq6ZbEg&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
